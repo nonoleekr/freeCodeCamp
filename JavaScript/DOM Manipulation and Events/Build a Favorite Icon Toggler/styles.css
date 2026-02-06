@@ -1,0 +1,58 @@
+/* Basic Page Styling */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* List Styling */
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item-list li {
+  background: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* The Button Base */
+.favorite-icon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ccc; /* Default grey color */
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.2s;
+  outline: none;
+}
+
+.favorite-icon:hover {
+  transform: scale(1.2);
+}
+
+/* The Active State (Requirement 8 & 9) */
+.filled {
+  color: crimson;
+  transform: scale(1.2);
+  animation: pulse 0.3s linear;
+}
+
+/* Optional: Fun Heartbeat Animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1.2); }
+}
