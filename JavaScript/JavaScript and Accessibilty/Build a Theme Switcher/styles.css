@@ -1,0 +1,107 @@
+/* Base body styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.3s, color 0.3s;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+/* Theme-specific body classes */
+body.theme-light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+body.theme-dark {
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+/* Button styling */
+#theme-switcher-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#theme-switcher-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+#theme-switcher-button:focus {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
+
+/* Dropdown menu styling */
+#theme-dropdown {
+  position: absolute;
+  margin-top: 10px;
+  padding: 0;
+  width: 150px;
+  list-style: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 100;
+  color: #333;
+  background-color: white;
+  transition: background 0.3s, color 0.3s;
+}
+
+#theme-dropdown[hidden] {
+  display: none;
+}
+
+#theme-dropdown li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-bottom: 1px solid #eee;
+}
+
+#theme-dropdown li:last-child {
+  border-bottom: none;
+}
+
+#theme-dropdown li:hover,
+#theme-dropdown li:focus {
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+/* Dark theme dropdown */
+body.theme-dark #theme-dropdown {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+body.theme-dark #theme-dropdown li:hover {
+  background-color: #444;
+}
+
+/* Live region styling */
+[aria-live="polite"] {
+  margin-top: 20px;
+  min-height: 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  transition: color 0.3s;
+}
+
+body.theme-dark [aria-live="polite"] {
+  color: #f0f0f0;
+}
